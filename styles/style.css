@@ -2,7 +2,7 @@
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
+✦ card__like-btn — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
@@ -170,7 +170,7 @@
   font-size: clamp(3.0625rem, 1.9087rem + 4.9231cqi, 4.0625rem);
 }
 
-.card__parahraph {
+.card__text {
   padding-inline-start: 26px;
   letter-spacing: 0.55px;
   padding-inline-end: 29px;
@@ -178,7 +178,7 @@
   padding-bottom: 0px;
 }
 
-.card__like-button {
+.card__like-btn {
   inline-size: 130px;
   block-size: 38px;
 }
@@ -301,7 +301,7 @@ body:has(.dialog[open]) {
   text-transform: inherit;
 }
 
-.image-label {
+.image-text {
   position: absolute;
   top: 59px;
   right: clamp(0.813rem, 3.692vw - 0.053rem, 1.563rem);
@@ -323,32 +323,33 @@ body:has(.dialog[open]) {
   background-color: var(--bg-color, #fff);
 }
 
-.blur {
-  filter: blur(10px);
+.bright {
+  filter: brightness(0.5);
 }
 
-.serpia {
-  filter: sepia(1);
-}
-
-.multi-filter {
-  filter: hue-rotate(0.5turn) invert(100%);
-}
-
-.opasity-filter {
-  filter: opacity(40%);
-}
-
-.saturate {
-  filter: saturate(400%);
-}
-
-.invert {
-  filter: invert(95%);
+.blurring {
+  filter: blur(5px);
 }
 
 .contrast {
-  filter: contrast(700px);
+  filter: contrast(2);
+}
+
+.gray {
+  filter: grayscale(1);
+}
+
+.hue {
+  filter: hue-rotate(90deg);
+}
+
+.invert {
+  filter: invert(1);
+}
+
+.multy-filter {
+  filter: grayscale(0.5) contrast(1.5) brightness(0.8);
+
 }
 
 @media (width < 376px) {
@@ -387,7 +388,7 @@ body:has(.dialog[open]) {
     padding-top: 28px;
   }
 
-  .card__parahraph {
+  .card__text {
     padding-top: 27px;
     padding-inline-end: 31px;
     line-height: 20.8px;
@@ -397,7 +398,7 @@ body:has(.dialog[open]) {
     padding-block-start: 4px;
   }
 
-  .no-filter .image-label {
+  .no-filter .image-text {
     top: 76px;
   }
 
@@ -413,7 +414,7 @@ body:has(.dialog[open]) {
 
 @supports (text-stroke: 1px var var(--stroke-color, #fff)) or
   (-webkit-text-stroke: 1px var(--stroke-color, #fff)) {
-  .image-label {
+  .image-text {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--stroke-color, #fff);
     text-stroke: 1px var(--stroke-color, #fff);
