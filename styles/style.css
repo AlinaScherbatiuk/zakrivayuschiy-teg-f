@@ -268,7 +268,7 @@ body:has(.dialog[open]) {
 .dialog__form {
   display: grid;
   grid-template-columns: min-content auto;
-  inline-size: 318px;
+  max-inline-size: 318px;
   align-items: center;
   gap: 20px 20px;
   padding: 0px 11px;
