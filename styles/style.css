@@ -135,7 +135,7 @@
 .card__title {
   letter-spacing: 0.16px;
   background-color: var(--bg-color, #fff);
-  font-family: "Inter-Variable", "Arial", sans-serif;
+  font-family: "Inter", "Arial", sans-serif;
   font-variation-settings: "wght" 700, "wdth" 110, "opsz" 0;
   font-size: 18px;
   padding-inline-start: 10px;
@@ -303,7 +303,7 @@ body:has(.dialog[open]) {
 
 .image-text {
   position: absolute;
-  top: 59px;
+  top: 25px;
   right: clamp(0.813rem, 3.692vw - 0.053rem, 1.563rem);
   opacity: 0.5;
   color: var(--main-color, #000);
@@ -316,7 +316,8 @@ body:has(.dialog[open]) {
 }
 
 .card_content {
-  font-family: "Inter-Variable", "Arial", sans-serif;
+  position: relative;
+  font-family: "Inter", "Arial", sans-serif;
   font-variation-settings: "wght" 400, "wdth" 110, "opsz" 0;
   font-size: 18px;
   line-height: 120%;
