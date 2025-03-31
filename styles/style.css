@@ -397,11 +397,7 @@ body:has(.dialog[open]) {
 
   .like__heard {
     padding-block-start: 4px;
-  }
-
-  .no-filter .image-text {
-    top: 76px;
-  }
+  }  
 
   .footer__image {
     block-size: 30px;
